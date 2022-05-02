@@ -6,3 +6,6 @@ The program use settings.csv file to read router IP, username, password(optional
 
 You can use private_hosts.csv to set resources, than you does not want to spread thru github (private work VPN servers, finance services etc).
 Program RussianNoVPNservices.class use both files hosts.csv and private_hosts.csv to configure router.
+
+run as:
+java -classpath [folderOfClassFile] RussianNoVPNservices

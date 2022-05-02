@@ -2,6 +2,7 @@ import java.io.*;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.*;
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -11,7 +12,7 @@ class RussianNoVPNservices {
     final static String COLUMN_DELIMITER = ",";
     final static String LF = "\n";
     final static String DIR = RussianNoVPNservices.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-    final static String routerCommandsFileName = "router_commands.txt";
+    //final static String routerCommandsFileName = "router_commands.txt";
 
     static void getIPsByHostName(String hostname, Map<String, Boolean> map) throws UnknownHostException {
         int i;
@@ -25,14 +26,14 @@ class RussianNoVPNservices {
             //get all IP addresses for hostname
             addresses = InetAddress.getAllByName(hostname);
             //lets sort by IP
-            Arrays.sort(addresses, new Comparator<InetAddress>() {
+            /*Arrays.sort(addresses, new Comparator<InetAddress>() {
                 public int compare(InetAddress ip1, InetAddress ip2) {
                     return Integer.compare(
                             256*(ip1.getAddress()[0] & 0xff) + 256*(ip1.getAddress()[1] & 0xff) + 256*(ip1.getAddress()[2] & 0xff) + (ip1.getAddress()[3] & 0xff)
                            ,256*(ip2.getAddress()[0] & 0xff) + 256*(ip2.getAddress()[1] & 0xff) + 256*(ip2.getAddress()[2] & 0xff) + (ip2.getAddress()[3] & 0xff)
                     );
                 }
-            });
+            });*/
 
             for (InetAddress addr : addresses) {
                 map.put(addr.getHostAddress(), true);
@@ -129,6 +130,7 @@ class RussianNoVPNservices {
                     routerInterfaceList.put(m.group(1), m.group(2) + " (" + m.group(1) + ")");
                 }
                 //System.out.println(routerInterfaceList);
+                System.out.println();
                 System.out.println("Choose interface for internet without VPN (type number) ");
                 int ii;
                 //String[] interfaceIDs;
