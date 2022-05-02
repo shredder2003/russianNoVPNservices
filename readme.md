@@ -9,3 +9,5 @@ Program **RussianNoVPNservices.class** use both files **hosts.csv** and **privat
 
 run as:
 > java -classpath [folderOfClassFile] RussianNoVPNservices
+
+if there is not InterfaceID data in **settings.csv**, then program list all router interfaces and ask to choose one. Your should choose your main internet interface, usually something like "Ethernet ISP" if you use wire internet connection.
