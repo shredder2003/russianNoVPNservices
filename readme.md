@@ -17,5 +17,5 @@ or just:
 if there is no InterfaceID data in **settings.csv**, then program list all router interfaces and ask to choose one. You should choose your main internet interface, usually something like "Ethernet ISP" if you use wire internet connection.
 
 tested on Keenetic OS versions:
-3.8 Alpha 8
-3.7.4
+- 3.8 Alpha 8
+- 3.7.4
