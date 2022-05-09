@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 class RussianNoVPNservices {
 
-    final static int bormbardTimes = 20;
+    final static int bombardTimes = 20;
     final static String COLUMN_DELIMITER = ",";
     final static String LF = "\n";
     final static String DIR = RussianNoVPNservices.class.getProtectionDomain().getCodeSource().getLocation().getPath();
@@ -38,7 +38,7 @@ class RussianNoVPNservices {
             for (InetAddress addr : addresses) {
                 map.put(addr.getHostAddress(), true);
             }
-        } while(map.size() == 1 && i < RussianNoVPNservices.bormbardTimes);
+        } while(map.size() == 1 && i < RussianNoVPNservices.bombardTimes);
         //if hostname not starts with "www." , then check www.hostname also recursively
         if( ! hostname.substring(0,4).equalsIgnoreCase("www.") ){
             try {
@@ -123,11 +123,11 @@ class RussianNoVPNservices {
             try {
                 String interfaceList = execCmd(DIR + "plink " + userName + "@" + routerIP + " -pw " + userPass + " -batch show interface");
                 //System.out.println(interfaceList);
-                String pattern = "Interface, name = \"[^\"]+\"\\n\\s+id: (\\S+)\\n\\s+index: \\S+\\n\\s+interface-name: \\S+\\n\\s+type: \\S+\\n\\s+description: ([^\\n]+)";
+                String pattern = "Interface, name = \"[^\"]+\"\\n\\s+id: (\\S+)\\n\\s+index: \\S+\\n\\s+(interface-name: \\S+\\n\\s+)?type: \\S+\\n\\s+description: ([^\\n]+)";
                 Matcher m = Pattern.compile(pattern)
                         .matcher(interfaceList);
                 while (m.find()) {
-                    routerInterfaceList.put(m.group(1), m.group(2) + " (" + m.group(1) + ")");
+                    routerInterfaceList.put(m.group(1), m.group(3) + " (" + m.group(1) + ")");
                 }
                 //System.out.println(routerInterfaceList);
                 System.out.println();
