@@ -1,3 +1,4 @@
+chcp 65001
 
 java -classpath %~dp0 RussianNoVPNservices
 
