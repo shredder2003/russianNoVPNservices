@@ -19,3 +19,5 @@ if there is no InterfaceID data in **settings.csv**, then program list all route
 tested on Keenetic OS versions:
 - 3.8 Alpha 8
 - 3.7.4
+
+link to [RU article](https://vc.ru/u/1190445-vcinder-vcowler/420962-rossiyskie-resursy-nedostupnye-izvne-avtomatizaciya-dostupa-k-nim-pri-rabote-cherez-vpn)
