@@ -118,6 +118,16 @@ class RussianNoVPNservices {
                 return;
             }
         }
+        //without cached servers fingerpring plink does not accept connection to server.
+		//so emulate that user send "y" to question "If you trust this host, enter "y" to add the key to"
+        try {
+            execCmd("cmd.exe /c echo y | "+ DIR + "plink " + userName + "@" + routerIP + " -pw " + userPass + " exit");
+        } catch (java.io.IOException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+            return;
+        }
+		
         System.out.println("interfaceID="+interfaceID);
         if( interfaceID==null || interfaceID.isEmpty() ) {
             try {
