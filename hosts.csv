@@ -6,7 +6,16 @@ gu-st.ru,Госуслуги
 nalog.ru,Госуслуги
 mos.ru,Госуслуги
 login.mos.ru,Госуслуги
+my.mos.ru,Госуслуги
 school.mos.ru,Школа
+css-pgu.mos.ru,Госуслуги
+js-pgu.mos.ru,Госуслуги
+maps.api.2gis.ru,Госуслуги
+media-pgu.mos.ru,Госуслуги
+static3.mos.ru,Госуслуги
+metrika.mos.ru,Госуслуги
+chat.mos.ru,Госуслуги
+doc-upload.mos.ru,Госуслуги
 dnevnik.mos.ru,Школа
 evp.mos.ru,Госуслуги
 pay.mos.ru,Госуслуги
@@ -120,6 +129,7 @@ avatars.mds.yandex.net,Стриминг
 yandex.ru,Стриминг
 decathlon.ru,Магазины
 leroymerlin.ru,Магазины
+mvideo.ru,Магазины
 cian.ru
 dpd.ru
 gorod.mos.ru,Госуслуги
@@ -133,6 +143,9 @@ bank.bcs.ru,Банки
 ns-bank.ru,Банки
 dbo.ns-bank.ru,Банки
 lk.alfadirect.ru,Банки
+online.sberbank.ru,Банки
+securepayments.sberbank.ru,Банки
+3ds2.ubrr.ru,Банки
 core-renderer-tiles.maps.yandex.net,Карты
 core-sat.maps.yandex.net,Карты
 uchi.ru,Школа
